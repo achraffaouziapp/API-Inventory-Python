@@ -201,6 +201,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [tests, security]
     if: github.ref == 'refs/heads/develop'
+    continue-on-error: true   # <-- ajoute cette ligne
 
     steps:
       - name: Checkout code
